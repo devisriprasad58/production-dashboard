@@ -1,4 +1,3 @@
-// src/components/LanguageSwitcher/LanguageSwitcher.tsx
 import React from 'react';
 import { Select } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
