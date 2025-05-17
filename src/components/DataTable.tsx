@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Paper, Title, Loader, Text } from "@mantine/core";
-import { useFetchData } from "../Hooks/useFetchData";  // Your API fetch hook
+import { useFetchData } from "../Hooks/useFetchData";
 
 const DataTable: React.FC<{ filterValues: any }> = ({ filterValues }) => {
   const { data = [], isLoading, error } = useFetchData();
@@ -8,7 +8,6 @@ const DataTable: React.FC<{ filterValues: any }> = ({ filterValues }) => {
   if (isLoading) return <Loader />;
   if (error) return <Text color="red">Failed to load table data</Text>;
 
-  // Apply filters on fetched data
   const filteredData = data.filter((item: any) => {
     if (!item) return false;
 
