@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { useForm } from "@mantine/form";
-import tableData from "../data/data.json"; // adjust path as needed
+import tableData from "../data/data.json"; 
 
 const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
   const form = useForm<any>({
@@ -23,7 +23,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
     },
   });
 
-  // Prepare autocomplete data arrays from your JSON data
+  
   const machineNames = Array.from(
     new Set(tableData.map((item: any) => item.machineName))
   );
@@ -32,7 +32,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
   );
   const outputs = Array.from(
     new Set(tableData.map((item: any) => String(item.output)))
-  ); // convert outputs to strings for autocomplete
+  ); 
 
   const handleSubmit = (values: any) => {
     onFilterChange(values);
@@ -46,7 +46,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <Stack gap="md">
           <Group grow align="flex-end" wrap="wrap">
-            {/* Machine Name Autocomplete */}
+            
             <Autocomplete
               label="Machine Name"
               placeholder="Select or type machine name"
@@ -55,7 +55,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
               clearable
             />
 
-            {/* Status Autocomplete */}
+            
             <Autocomplete
               label="Status"
               placeholder="Select or type status"
@@ -64,7 +64,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
               clearable
             />
 
-            {/* Output Autocomplete */}
+            
             <Autocomplete
               label="Output"
               placeholder="Select or type output"
@@ -73,7 +73,7 @@ const FilterSection: React.FC<any> = ({ onFilterChange, onSwitchChange }) => {
               clearable
             />
 
-            {/* Date Range */}
+           
             <DatePickerInput
               type="range"
               label="Date Range"

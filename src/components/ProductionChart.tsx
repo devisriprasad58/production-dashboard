@@ -1,4 +1,4 @@
-// components/ProductionChart.tsx
+
 import React, { useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
@@ -14,26 +14,25 @@ const ProductionChart: React.FC<{ filterValues: any }> = ({ filterValues }) => {
 const filteredData = data.filter((item: any) => {
   if (!item) return false;
 
-  // Filter by machineName if given
+  
   const matchesMachineName =
     !filterValues?.machineName ||
     (item.machineName &&
       filterValues.machineName &&
       item.machineName.toLowerCase() === filterValues.machineName.toLowerCase());
 
-  // Filter by status if given
   const matchesStatus =
     !filterValues?.status ||
     (item.status &&
       filterValues.status &&
       item.status.toLowerCase() === filterValues.status.toLowerCase());
 
-  // Filter by output if given (number)
+ 
   const matchesOutput =
     !filterValues?.output ||
     (item.output !== undefined && Number(item.output) === Number(filterValues.output));
 
-  // Filter by date range
+  
   const matchesDateRange = (() => {
     const [start, end] = filterValues?.dateRange || [null, null];
     if (!start && !end) return true;
