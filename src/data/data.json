@@ -1,0 +1,32 @@
+[
+  {
+    "machineName": "Machine A",
+    "status": "Running",
+    "output": "120 units",
+    "lastUpdated": "2025-05-17 10:30 AM"
+  },
+  {
+    "machineName": "Machine B",
+    "status": "Stopped",
+    "output": "0 units",
+    "lastUpdated": "2025-05-17 09:00 AM"
+  },
+  {
+    "machineName": "Machine C",
+    "status": "Maintenance",
+    "output": "N/A",
+    "lastUpdated": "2025-05-16 04:45 PM"
+  },
+  {
+    "machineName": "Machine D",
+    "status": "Running",
+    "output": "300 units",
+    "lastUpdated": "2025-05-17 11:00 AM"
+  },
+  {
+    "machineName": "Machine E",
+    "status": "Idle",
+    "output": "50 units",
+    "lastUpdated": "2025-05-17 08:30 AM"
+  }
+]

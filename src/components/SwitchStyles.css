@@ -1,0 +1,23 @@
+.custom-switch-track {
+  font-size: 18px; /* Increase font size of onLabel/offLabel */
+  font-weight: bold;
+}
+
+.mantine-Switch-root {
+  display: flex;
+  align-items: center;
+}
+
+.mantine-Switch-trackLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 78%;
+}
+
+.mantine-Group-root {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
