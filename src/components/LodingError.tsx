@@ -1,4 +1,3 @@
-// src/components/LoadingError/LoadingError.tsx
 import React from 'react';
 import { Loader, Alert } from '@mantine/core';
 
